@@ -55,7 +55,7 @@ class PanicManager {
     cancelPanicManually() {
         this.stopTimer();
         
-        // Return a status to tell the UI to go back to Home
+        // Retturn a status to tell the UI to go back to Home
         return "SAFE";
     }
 }

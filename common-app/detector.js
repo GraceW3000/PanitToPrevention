@@ -1,7 +1,7 @@
 // Purpose: Handles the mathematical analysis of HRV signals.
 
 export const analyzeHRV = (currentHRV, baselineHRV, previousHRV = null) => {
-    // Step 1. Calculate percentage drop from baseline
+    // Step 1. Calculate pecentage drop from baseline
     const percentDrop = (baselineHRV - currentHRV) / baselineHRV;
 
     // Step 2. Calculate "Rate of Change" (How fast did it drop since the last reading?)
@@ -10,7 +10,7 @@ export const analyzeHRV = (currentHRV, baselineHRV, previousHRV = null) => {
         rateOfChange = previousHRV - currentHRV;
     }
 
-    // THRESHOLDS (These can be adjusted in settings later)
+    // THRESHLDS (These can be adjusted in settings later)
     const DROP_LIMIT = 0.25; // 25% drop
     const CRASH_LIMIT = 15;  // 15ms sudden drop
 
